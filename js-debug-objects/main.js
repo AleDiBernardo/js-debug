@@ -56,7 +56,7 @@ const cars = [
         manufacturer: 'Seat',
         model: 'Ibiza',
         type: 'metano'
-    }
+    },
     {
         manufacturer: 'Audi',
         model: 'R8',
@@ -64,14 +64,14 @@ const cars = [
     },
 ];
 
-const gasolineCars = cars.filter( (auto) >= auto.type === 'benzina');
+const gasolineCars = cars.filter( (auto) => auto.type === 'benzina' || auto.type === 'Benzina');
 
-const dieselCars = cars.filter( (auto) => {
-    auto.type === 'diesel';
-});
+const dieselCars = cars.filter( (auto) => 
+    auto.type === 'diesel' || auto.type === 'Diesel'
+);
 
 const otherCars = cars.filter( (auto) => {
-    return auto.type !== 'benzina' || auto.type !== 'diesel';
+    return auto.type !== 'benzina' && auto.type !== 'Benzina' && auto.type !== 'diesel' && auto.type !== 'Diesel';
 });
 
 console.log('Auto a benzina');
@@ -84,3 +84,12 @@ console.log(dieselCars);
 
 console.log('Tutte le altre auto');
 console.log(otherCars);
+
+
+//  ERRORI: 
+    // - manca una virgola a riga 59
+    // - riga 67 >= invece di =>
+    // - riga 67 aggiunto || auto.type === 'Benzina'
+    // - aggiunte altre condizioni OR
+    // - riga 69 rimosse parentesi graffe
+    // - riga 70 rimossi ;
