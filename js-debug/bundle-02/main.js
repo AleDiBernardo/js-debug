@@ -46,14 +46,20 @@ printColorsNumber();
 // C'è un errore sintattico, lenght invece di length
 // Non ci sono errori logici
 
-// // ESERCIZIO 3
-// function addNumbers() {
-//     const userNumber = prompt('Inserisci un numero');
-//     const total = userNumber + 12;
+// ESERCIZIO 3
+function addNumbers() {
+    const userNumber = parseInt(prompt('Inserisci un numero'));
+    const total = userNumber + 12;
 
-//     console.log(`Il risultato finale è ${total}`);
-// }
-// addNumbers();
+    console.log(`Il risultato finale è ${total}`);
+}
+addNumbers();
+
+
+// Questa funzione dovrebbe sommare ad un numero in input 12 e stampare il risultato
+// Non ci sono errori sintattici
+// Il numero preso in input è una stringa e non viene convertito in numero durante l'operazione
+// quindi avviene la concatenazione
 
 
 // // ESERCIZIO 4
