@@ -47,13 +47,13 @@ printColorsNumber();
 // Non ci sono errori logici
 
 // ESERCIZIO 3
-function addNumbers() {
-    const userNumber = parseInt(prompt('Inserisci un numero'));
-    const total = userNumber + 12;
+// function addNumbers() {
+//     // const userNumber = parseInt(prompt('Inserisci un numero'));
+//     const total = userNumber + 12;
 
-    console.log(`Il risultato finale è ${total}`);
-}
-addNumbers();
+//     console.log(`Il risultato finale è ${total}`);
+// }
+// addNumbers();
 
 
 // Questa funzione dovrebbe sommare ad un numero in input 12 e stampare il risultato
@@ -62,15 +62,15 @@ addNumbers();
 // quindi avviene la concatenazione
 
 
-// // ESERCIZIO 4
+// ESERCIZIO 4
 // function checkAccess() {
 //     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
 //     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-//     let grantAccess = 'false';
+//     let grantAccess = false;
 
 //     if (addresses.includes(userEmail)) {
-//         grantAccess = 'true';
+//         grantAccess = true;
 //     }
 
 //     if (grantAccess === true) {
@@ -81,34 +81,50 @@ addNumbers();
 // }
 // checkAccess();
 
+// Questa funzione dovrebbe verificare se l'email inserita dall'utente è presente nell'array e consentire o meno
+// l'accesso tramite delle condizioni
+// Non ci sono errori sintattici
+// C'è un errore logico, grantAccess viene inizializzata come stringa e poi nell'if viene controllato se il suo valore 
+// è booleano, la strada più conveniente sarebbe usare il tipo booleano
 
-// // ESERCIZIO 5 (suggerimento: c'è un solo errore)
-// function checkAccessImproved() {
-//     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
 
-//     const userEmail = prompt('Inserisci il tuo indirizzo email');
+// ESERCIZIO 5 (suggerimento: c'è un solo errore)
+function checkAccessImproved() {
+    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
 
-//     let grantAccess = 'false';
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-//     for (let i = 0; i < addresses.length; i++) {
-//         const email = addresses[i];
+    let grantAccess = false;
 
-//         if (userEmail.length > 5) {
+    for (let i = 0; i < addresses.length; i++) {
+        const email = addresses[i];
 
-//             if (email === userEmail) {
-//                 grantAccess = 'true';
+        if (userEmail.length > 5) {
 
-//             }
+            if (email === userEmail) {
+                grantAccess = true;
 
-//         }
+            }
 
-//         if (grantAccess) {
-//             console.log('Accesso consentito!');
-//         } else {
-//             console.log('Accesso negato!');
-//         }
-//     }
-//     checkAccessImproved();
+        }
+
+        
+    }
+    
+    if (grantAccess) {
+        console.log('Accesso consentito!');
+    } else {
+        console.log('Accesso negato!');
+    }
+}
+checkAccessImproved();
+
+
+// Questa è una versione della funzione di prima con qualche controllo in più
+// ERRORI SINTATTICI:
+    // - manca la chiusura della funzione }
+    // - grantAccess è una stringa e quindi la condizione non sarà mai 
+    // - la stampa in console attraverso il controllo va fatto fuori dal for
 
 
 
